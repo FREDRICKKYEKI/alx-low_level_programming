@@ -6,7 +6,7 @@
  * @n: bytes filled.
  * Return: the pointer to dest.
  */
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_memcpy(void *dest, const void *src, size_t n)
 {
 	char *d = dest;
 	const char *s = src;
