@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add-node_end - adds a new node at the beginning 
+ * add-node_end - adds a new node at the beginning
  * of a list_t list.
  * @head: head of linked list
  * @str: string to add to linked list
