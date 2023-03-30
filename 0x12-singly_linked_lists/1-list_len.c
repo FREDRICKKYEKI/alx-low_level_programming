@@ -19,6 +19,5 @@ size_t list_len(const list_t *h)
 			nelem++;
 		}
 	}
-	printf("%d elements", nelem);
 	return (nelem);
 }
