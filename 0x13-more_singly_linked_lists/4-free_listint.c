@@ -5,8 +5,8 @@
  * @head: head of linked list.
  * Return: void.
  */
- void free_listint(listint_t *head)
- {
+void free_listint(listint_t *head)
+{
 	listint_t *curr;
 
 	while ((curr = head) != NULL)
@@ -15,4 +15,4 @@
 		free(curr->n);
 		free(curr);
 	}
- }
+}

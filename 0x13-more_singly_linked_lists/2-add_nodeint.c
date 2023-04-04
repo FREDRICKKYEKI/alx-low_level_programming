@@ -5,20 +5,20 @@
  * @head: head of linked list
  * Return: address of the new element, or NULL if it failed.
  */
- listint_t *add_nodeint(listint_t **head, const int n)
- {
+listint_t *add_nodeint(listint_t **head, const int n)
+{
 	listint_t *newHead;
 
 	newHead = malloc(sizeof(listint_t));
 	if (newHead == NULL)
 	{
 		printf("\nError!!!");
-		return NULL;
+		return (NULL);
 	}
 
 	newHead->n = n;
 	newHead->next = *head;
 	*head = newHead;
 
-	return newHead;
+	return (newHead);
  }
