@@ -14,7 +14,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	int count;
 
 	count = 0;
-	newNode = malloc(sizeof(listint_t));
 	headcpy = *head;
 
 	if (idx != 0)
@@ -29,9 +28,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		return (NULL);
 	}
+	newNode = malloc(sizeof(listint_t));
 	newNode->n = n;
 
-	if (headcpy == NULL  && idx != 0)
+	if (newNode == NULL  && idx != 0)
 	{
 		return (NULL);
 	}
