@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * create_file - creates a file with the specified name and writes the given
  *text content to it
@@ -11,7 +11,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	ssize_t bytes_written;
+	int bytes_written;
 	int fd;
 
 	if (filename == NULL)
