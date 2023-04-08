@@ -36,7 +36,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	bytes_written = write(STDOOUT_FILENO, buf, bytes_read);
+	bytes_written = write(STDOUT_FILENO, buf, bytes_read);
 	if (bytes_written == -1 || bytes_written != bytes_read)
 	{
 		close(fd);
