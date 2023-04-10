@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 {
 	ssize_t nofchars, bytes_written;
 	char buf[1024];
-	int close_err;
+	int close_err, file_from, file_to;
 
 	if (argc != 3)
 	{
