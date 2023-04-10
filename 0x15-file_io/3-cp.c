@@ -7,16 +7,16 @@
  * @argv: arguments vector
  * Return: void
 */
-void show_error(char *err_type, char * argv[])
+void show_error(char *err_type, char *argv[])
 {
 	switch (err_type)
 	{
-		case "r":
+		case 'r':
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1])
 			exit(98);
 			break;
-		case "w":
-			dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2])
+		case 'w':
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2])
 			exit(99);
 			break;
 		default:
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 		show_error("r", argv);
 	if (file_to == -1)
 		show_error("w", argv);
-	
+
 	nofchars = 1024;
 	while (nofchars == 1024)
 	{
@@ -60,15 +60,18 @@ int main(int argc, char *argv[])
 		if (bytes_written == -1)
 			show_error("w", argv);
 	}
-	close_err = close(file_to);
+
+	close_err = close(file_from);
 	if (close_err == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Cant close fd %d\n", file_from);
 		exit(100);
 	}
+
+	close_err = close(file_to);
 	if (close_err == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Cant close fd %d\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Cant close fd %d\n", file_from);
 		exit(100);
 	}
 	return (0);
