@@ -12,11 +12,11 @@ void show_error(char err_type, char *argv[])
 	switch (err_type)
 	{
 		case 'r':
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1])
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 			break;
 		case 'w':
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2])
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 			exit(99);
 			break;
 		default:
