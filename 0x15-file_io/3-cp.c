@@ -7,7 +7,7 @@
  * @argv: arguments vector
  * Return: void
 */
-void show_error(char *err_type, char *argv[])
+void show_error(char err_type, char *argv[])
 {
 	switch (err_type)
 	{
