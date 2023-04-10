@@ -46,19 +46,19 @@ int main(int argc, char *argv[])
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 
 	if (file_from == -1)
-		show_error("r", argv);
+		show_error('r', argv);
 	if (file_to == -1)
-		show_error("w", argv);
+		show_error('w', argv);
 
 	nofchars = 1024;
 	while (nofchars == 1024)
 	{
 		nofchars = read(file_from, buf, 1024);
 		if (nofchars == -1)
-			show_error("r", argv);
+			show_error('r', argv);
 		bytes_written = write(file_to, buf, nofchars);
 		if (bytes_written == -1)
-			show_error("w", argv);
+			show_error('w', argv);
 	}
 
 	close_err = close(file_from);
