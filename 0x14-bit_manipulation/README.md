@@ -1,3 +1,6 @@
+## 0x14-bit_manipulation
+
+=======
 # Bit manipulation
 Project done during **Full Stack Software Engineering studies** at **ALX School**. It aims to learn about how to manipulate bits and use bitwise operators in **C language**.
 
@@ -20,3 +23,4 @@ All of the following files are scripts and programs written in C:
 | `5-flip_bits.c` | Returns the number of bits needed to flip to get from one number to another |
 | `100-get_endianess.c` | Checks the endianness |
 | `101-password` | Script that contains the password of `crackme3` file |
+
