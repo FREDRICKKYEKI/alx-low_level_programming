@@ -28,6 +28,7 @@ hash_node_t *add_hash_node(hash_node_t **head, const char *key,
 		{
 			free(tmp->value);
 			tmp->value = strdup(value);
+			return (*head);
 		}
 		tmp = tmp->next;
 	}
