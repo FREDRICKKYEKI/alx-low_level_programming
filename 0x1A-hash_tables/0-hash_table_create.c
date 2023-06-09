@@ -4,6 +4,7 @@
  * hash_table_create - creates a hash table with a given size
  *
  * @size: size of hash table
+ *
  * Return: the created hash table or
  * NULL if the function fails
  */
@@ -28,7 +29,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	for (i = 0; i < size; i++)
 		arr[i] = NULL;
 
-	table->arr = arr;
+	table->array = arr;
 	table->size = size;
 
 	return (table);
