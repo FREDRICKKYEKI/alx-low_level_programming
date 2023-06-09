@@ -28,7 +28,7 @@ void hash_table_print(const hash_table_t *ht)
 		/* 3. Iterate through the linked lists (nodes): print key and value */
 		while (temp != NULL)
 		{
-			printf("%s '%s': '%s'", tok, temp->key, temp->value);
+			printf("%s'%s': '%s'", tok, temp->key, temp->value);
 			tok = ", ";
 			temp = temp->next;
 		}
