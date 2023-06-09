@@ -14,7 +14,6 @@ hash_node_t *add_hash_node(hash_node_t **head, const char *key,
 {
 	/* 1. Create a new temp node */
 	hash_node_t *tmp;
-
 	/* 2. Assign passed node to it */
 	tmp = *head;
 
