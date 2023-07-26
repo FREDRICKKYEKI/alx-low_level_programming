@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module that contains the island_perimeter function 
+"""Module that contains the island_perimeter function
 """
 
 
