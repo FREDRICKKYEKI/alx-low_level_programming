@@ -4,20 +4,19 @@
 /**
  * print_array - function that prints array of given size
  * @array: a pointer to the first element of the array to search in
- * @start_idx: start index
- * @end_idx: end index
+ * @size:  size of array
  *
  * Return: void
  */
 void print_array(int *array, size_t size)
 {
-    size_t i;
+	size_t i;
 
-    printf("Searching in array: ");
+	printf("Searching in array: ");
 
-    for (i = 0; i < size - 1; i++)
-        printf("%d, ", array[i]);
-    printf("%d\n", array[i]);
+	for (i = 0; i < size - 1; i++)
+		printf("%d, ", array[i]);
+	printf("%d\n", array[i]);
 }
 
 /**
@@ -32,13 +31,12 @@ void print_array(int *array, size_t size)
  */
 int recursive_search(int *array, size_t size, int value)
 {
-    size_t mid = size / 2;
+	size_t mid = size / 2;
 
 	if (array == NULL || size == 0)
 		return (-1);
 
-    print_array(array, size);
-
+	print_array(array, size);
 
 	if (mid && size % 2 == 0)
 		mid--;
@@ -66,8 +64,12 @@ int recursive_search(int *array, size_t size, int value)
  */
 int binary_search(int *array, size_t size, int value)
 {
-    int index = recursive_search(array, size, value);
-	
+	int index;
 
-    return (index);
+	index = recursive_search(array, size, value);
+
+	if (index >= 0 && array[index] != value)
+		return (-1);
+
+	return (index);
 }
