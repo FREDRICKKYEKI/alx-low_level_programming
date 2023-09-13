@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include "math.h"
 
 /**
  * print_array - function that prints array of given size
