@@ -110,7 +110,7 @@ int exponential_search(int *array, size_t size, int value)
 
 	index = binary_search((array + j), ((i + 1) - j), value);
 
-	if (index >= 0 && array[index + j] == value)
+	if (index >= 0)
 		index = (index + j);
 
 	return (index);
